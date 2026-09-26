@@ -45,7 +45,7 @@ format_info <- function(text) {
 }
 
 logo_html <- '
-<a href="https://ermites.maioricasacra.org/betlem/ip1/" class="logo">
+<a href="https://ermites.maioricasacra.org/betlem/ip8/" class="logo">
   <img src="fotos/logo-ermita-betlem.png" alt="Inici">
 </a>
 '
@@ -100,12 +100,6 @@ botons_html <- paste0(
   collapse = "\n"
 )
 
-# Llista de zones davall de la imatge
-llista_html <- paste0(
-  '<a href="zones/', posicions$fitxer, '">', zones_uniques, '</a>',
-  collapse = "\n"
-)
-
 index_html <- paste0(
 '<!DOCTYPE html>
 <html lang="ca">
@@ -119,7 +113,13 @@ index_html <- paste0(
 <body>
 
 ', logo_html, '
+<a href="https://ermites.maioricasacra.org/betlem/ip8/"
+   class="boto-sortida">Sortir de<br>l\'església</a>
 ', selector_idioma("index.html", index_cast_file), '
+
+
+<div class="separador-capcalera"></div>
+
 <h1>Ermita de Betlem</h1>
 
 <div class="contenidor-imatge">
@@ -127,10 +127,6 @@ index_html <- paste0(
 
 ', botons_html, '
 
-</div>
-
-<div class="llista-zones">
-', llista_html, '
 </div>
 
 <div class="logos-footer">
@@ -181,11 +177,17 @@ for (i in seq_len(nrow(dades))) {
 </head>
 <body>
 
-<a href="https://ermites.maioricasacra.org/betlem/ip1/" class="logo">
+<a href="https://ermites.maioricasacra.org/betlem/ip8/" class="logo">
   <img src="../fotos/logo-ermita-betlem.png" alt="Inici">
 </a>
 
+<a href="https://ermites.maioricasacra.org/betlem/ip8/"
+   class="boto-sortida">Sortir de<br>l\'església</a>
+
 ', canvi_idioma, '
+
+<div class="separador-capcalera"></div>
+
 <img src="../', carpeta_fotos, '/', foto, '" class="fitxa-imatge">
 <h1 class="fitxa-titol">', titol, '</h1>
 
@@ -238,11 +240,17 @@ for (zona in zones_uniques) {
 </head>
 <body>
 
-<a href="https://ermites.maioricasacra.org/betlem/ip1/" class="logo">
+<a href="https://ermites.maioricasacra.org/betlem/ip8/" class="logo">
   <img src="../fotos/logo-ermita-betlem.png" alt="Inici">
 </a>
 
+<a href="https://ermites.maioricasacra.org/betlem/ip8/"
+   class="boto-sortida">Sortir de<br>l\'església</a>
+
 ', canvi_idioma, '
+
+<div class="separador-capcalera"></div>
+
 <h1>', zona, '</h1>
 <div class="galeria">
 '
@@ -314,11 +322,6 @@ botones_html <- paste0(
   collapse = "\n"
 )
 
-# Llista de zones davall de la imatge
-lista_html <- paste0(
-  '<a href="zonas/', posiciones$fitxer, '">', zones_unicas, '</a>',
-  collapse = "\n"
-)
 
 indexcast_html <- paste0(
 '<!DOCTYPE html>
@@ -333,7 +336,13 @@ indexcast_html <- paste0(
 <body>
 
 ', logo_html, '
+<a href="https://ermites.maioricasacra.org/betlem/ip8/"
+   class="boto-sortida">Salir de<br>la iglesia</a>
 ', selector_idioma("index.html", index_cast_file), '
+
+
+<div class="separador-capcalera"></div>
+
 <h1>Ermita de Betlem</h1>
 
 <div class="contenidor-imatge">
@@ -341,10 +350,6 @@ indexcast_html <- paste0(
 
 ', botones_html, '
 
-</div>
-
-<div class="llista-zones">
-', lista_html, '
 </div>
 
 <div class="logos-footer">
@@ -390,11 +395,16 @@ for (i in seq_len(nrow(dades))) {
 </head>
 <body>
 
-<a href="https://ermites.maioricasacra.org/betlem/ip1/" class="logo">
+<a href="https://ermites.maioricasacra.org/betlem/ip8/" class="logo">
   <img src="../fotos/logo-ermita-betlem.png" alt="Inici">
 </a>
-
+<a href="https://ermites.maioricasacra.org/betlem/ip8/"
+   class="boto-sortida">Salir de<br>la iglesia</a>
 ', cambio_idioma, '
+
+<div class="separador-capcalera"></div>
+
+
 <img src="../', carpeta_fotos, '/', foto, '" class="fitxa-imatge">
 <h1 class="fitxa-titol">', titulo, '</h1>
 
@@ -445,11 +455,15 @@ for (zona in zones_unicas) {
 </head>
 <body>
 
-<a href="https://ermites.maioricasacra.org/betlem/ip1/" class="logo">
+<a href="https://ermites.maioricasacra.org/betlem/ip8/" class="logo">
   <img src="../fotos/logo-ermita-betlem.png" alt="Inici">
 </a>
-
+<a href="https://ermites.maioricasacra.org/betlem/ip8/"
+   class="boto-sortida">Salir de<br>la iglesia</a>
 ', cambio_idioma, '
+
+<div class="separador-capcalera"></div>
+
 <h1>', zona, '</h1>
 <div class="galeria">
 '

@@ -14,7 +14,7 @@ h1 {
     font-weight: 400;
     color: #583D29;
     margin-bottom: 20px;
-    margin-top: 70px;
+    margin-top: 30px;
     text-align: center;
 }
 
@@ -146,7 +146,7 @@ a {
     max-width: 700px;
     height: auto;
     display: block;
-    margin: 0 auto 20px auto;
+    margin: 10px auto 20px auto;
     border-radius: 10px;
     box-shadow: 0 4px 14px rgba(0,0,0,0.18);
 }
@@ -182,6 +182,11 @@ a {
     body {
         padding: 28px;
     }
+
+    .boto-sortida {
+        padding: 7px 22px;
+        font-size: 0.9rem;
+    }
 }
 
 
@@ -193,7 +198,7 @@ a {
 }
 
 .logo img {
-    height: 60px;   
+    height: 40px;   
     width: auto;
 }
 
@@ -206,7 +211,7 @@ a {
 }
 
 .logos-footer img {
-    height: 60px;
+    height: 40px;
     width: auto;
     margin: 0;
 }
@@ -216,18 +221,6 @@ a {
     font-size: 0.75rem;
     color: #6d5a4a;
     text-align: left;
-}
-
-.capcalera {
-    max-width: 900px;
-    margin: 0 auto 20px auto;
-}
-
-.capcalera-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
 }
 
 /* anul·lam posicionament absolut antic */
@@ -248,4 +241,47 @@ a {
 
 .idiomes a:hover {
     text-decoration: underline;
+}
+
+/* botó per sortir de la guia */
+.boto-sortida {
+    position: absolute;
+    top: 17px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: 7px 22px;
+    border: 1.5px solid #5D3C25;
+    border-radius: 999px;
+    color: #5D3C25;
+    background-color: #FBF5EC;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+
+
+.boto-sortida:hover {
+    background-color: #E2D9CE;
+    text-decoration: none;
+}
+
+.separador-capcalera {
+    border-top: 1.5px solid #5D3C25;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 6px;
+}
+
+@media (max-width: 699px) {
+    .boto-sortida {
+        padding: 4px 10px;
+        font-size: 0.68rem;
+        line-height: 1.05;
+        text-align: center;
+    }
 }
