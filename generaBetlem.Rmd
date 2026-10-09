@@ -82,23 +82,34 @@ imatge_portada <- "esglesia_general.jpg"
 # Posicions (s'han de definir a mà)
 posicions <- data.frame(
  zona = c("Nau central","Presbiteri", "Cúpula", "Trans. d.",  "Trans. e."),
-  top = c("65%","60%", "5%",  "70%", "70%"),
-  left = c("10%", "50%", "50%", "70%",  "25%"),
-  stringsAsFactors = FALSE
+  top = c("45%","60%", "5%",  "70%", "70%"),
+  left = c("5%", "42%", "43%", "70%",  "22%"),
+  classe_pc = c("", "mou-dreta", "mou-dreta","", ""),
+ stringsAsFactors = FALSE
 )
 
 # Afegir nom de fitxer
 posicions$fitxer <- paste0(slugify(zones_uniques), ".html")
 
 # Botons
+#botons_html <- paste0(
+#  '<a href="zones/', posicions$fitxer, '">
+#    <div class="boto-zona" style="top: ', posicions$top, '; left: ', posicions$left, ';">
+#      ', posicions$zona, '
+#    </div>
+#  </a>',
+#  collapse = "\n"
+#)
+
 botons_html <- paste0(
   '<a href="zones/', posicions$fitxer, '">
-    <div class="boto-zona" style="top: ', posicions$top, '; left: ', posicions$left, ';">
+    <div class="boto-zona ', posicions$classe_pc, '" style="top: ', posicions$top, '; left: ', posicions$left, ';">
       ', posicions$zona, '
     </div>
   </a>',
   collapse = "\n"
 )
+
 
 index_html <- paste0(
 '<!DOCTYPE html>
@@ -305,8 +316,8 @@ imatge_portada <- "esglesia_general.jpg"
 
 posiciones <- data.frame(
  zona = c("Nave central","Presbiterio", "Cúpula", "Trans. d.",  "Trans. i."),
-  top = c("65%","60%", "5%",  "70%", "70%"),
-  left = c("10%", "50%", "50%", "70%",  "25%"),
+  top = c("45%","60%", "5%",  "70%", "70%"),
+  left = c("5%", "42%", "43%", "70%",  "22%"),
   stringsAsFactors = FALSE
 )
 
